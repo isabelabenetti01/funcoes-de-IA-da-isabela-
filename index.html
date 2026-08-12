@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IA Drag & Drop - Classificador de Itens</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🤖 IA Classificador</h1>
+            <p>Arraste os itens para as categorias corretas</p>
+        </header>
+
+        <div class="content">
+            <!-- Área de Itens para Arrastar -->
+            <div class="items-section">
+                <h2>Itens</h2>
+                <div class="items-container" id="itemsContainer">
+                    <div class="item" draggable="true" data-category="frutas">🍎 Maçã</div>
+                    <div class="item" draggable="true" data-category="animais">🐱 Gato</div>
+                    <div class="item" draggable="true" data-category="frutas">🍌 Banana</div>
+                    <div class="item" draggable="true" data-category="animais">🐕 Cachorro</div>
+                    <div class="item" draggable="true" data-category="frutas">🍊 Laranja</div>
+                    <div class="item" draggable="true" data-category="animais">🦋 Borboleta</div>
+                    <div class="item" draggable="true" data-category="frutas">🍇 Uva</div>
+                    <div class="item" draggable="true" data-category="animais">🦁 Leão</div>
+                </div>
+            </div>
+
+            <!-- Área de Categorias -->
+            <div class="categories-section">
+                <div class="category-box" id="frutas">
+                    <h3>🍎 Frutas</h3>
+                    <div class="drop-zone"></div>
+                    <p class="count">0 itens</p>
+                </div>
+
+                <div class="category-box" id="animais">
+                    <h3>🐾 Animais</h3>
+                    <div class="drop-zone"></div>
+                    <p class="count">0 itens</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Área de Análise da IA -->
+        <div class="ai-analysis">
+            <h2>📊 Análise da IA</h2>
+            <div class="analysis-result" id="analysisResult">
+                <p>Arraste os itens para começar a análise...</p>
+            </div>
+            <button class="reset-btn" onclick="resetGame()">🔄 Resetar</button>
+        </div>
+
+        <!-- Feedback -->
+        <div class="feedback" id="feedback"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
